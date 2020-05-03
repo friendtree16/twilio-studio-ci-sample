@@ -27,4 +27,4 @@ jobs:
         TWILIO_AUTH_TOKEN : ${{ secrets.TWILIO_AUTH_TOKEN }}
         TWILIO_FLOW_SID : ${{ secrets.TWILIO_FLOW_SID }}
       run: |
-        curl -X POST https://studio.twilio.com/v2/Flows/${TWILIO_FLOW_SID} --data-urlencode "CommitMessage=Prod release v2" --data-urlencode "Definition=@flow/flow.json" --data-urlencode "Status=published" -u ${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}
+        curl -X POST https://studio.twilio.com/v2/Flows/${TWILIO_FLOW_SID} --data-urlencode "CommitMessage=Prod release v2" --data-urlencode "Definition@flow/flow.json" --data-urlencode "Status=published" -u ${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}
