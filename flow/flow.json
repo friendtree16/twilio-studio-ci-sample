@@ -1,0 +1,50 @@
+{
+  "states": [
+    {
+      "transitions": [
+        {
+          "event": "incomingMessage"
+        },
+        {
+          "event": "incomingCall",
+          "next": "SayHello"
+        },
+        {
+          "event": "incomingRequest"
+        }
+      ],
+      "type": "trigger",
+      "name": "Trigger",
+      "properties": {
+        "offset": {
+          "y": 0,
+          "x": 0
+        }
+      }
+    },
+    {
+      "transitions": [
+        {
+          "event": "audioComplete"
+        }
+      ],
+      "type": "say-play",
+      "name": "SayHello",
+      "properties": {
+        "say": "こんにちは、世界！",
+        "voice": "alice",
+        "language": "ja-JP",
+        "loop": 1,
+        "offset": {
+          "y": 240,
+          "x": -140
+        }
+      }
+    }
+  ],
+  "initial_state": "Trigger",
+  "flags": {
+    "allow_concurrent_calls": true
+  },
+  "description": "Hello World"
+}
