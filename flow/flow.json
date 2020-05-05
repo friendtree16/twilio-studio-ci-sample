@@ -31,7 +31,7 @@
       "type": "say-play",
       "name": "SayHello",
       "properties": {
-        "say": "こんにちは、次の次の世界",
+        "say": "こんにちは、次の次の次の世界",
         "voice": "alice",
         "language": "ja-JP",
         "loop": 1,
